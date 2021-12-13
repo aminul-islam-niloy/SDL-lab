@@ -3,6 +3,7 @@ import java.text.*;
 import java.util.*;
 public class StudentList {
 	public static void main(String[] args) {
+            //step 0
 
 //		Check arguments
 		if(args[0].equals("a")) {
@@ -14,7 +15,7 @@ public class StudentList {
 			String r = s.readLine();
 			String i[] = r.split(",");			
 			for(String j : i) { System.out.println(j); }
-			} catch (Exception e){} 
+			} catch (IOException e){} 
 			System.out.println("Data Loaded.");
 		}
 		else if(args[0].equals("r")) 
@@ -30,7 +31,7 @@ public class StudentList {
 			Random x = new Random();
 				int y = x.nextInt();
 					System.out.println(i[y]);
-			} catch (Exception e){} 
+			} catch (IOException e){} 
 			System.out.println("Data Loaded.");			
 		}
 		else if(args[0].contains("+")){
@@ -45,7 +46,7 @@ public class StudentList {
 	        String fd= dateFormat.format(d);
 			s.write(", "+t+"\nList last updated on "+fd);
 			s.close();
-			} catch (Exception e){}
+			} catch (IOException e){}
 							
 			System.out.println("Data Loaded.");	
 		}
@@ -66,7 +67,7 @@ public class StudentList {
 						done=true;
 				}
 			}
-			} catch (Exception e){} 
+			} catch (IOException e){} 
 			System.out.println("Data Loaded.");				
 		}
 		else if(args[0].contains("c")) 
@@ -88,7 +89,7 @@ public class StudentList {
 				}
 			}
 			System.out.println(count +" word(s) found " + a.length);
-			} catch (Exception e){} 
+			} catch (IOException e){} 
 			System.out.println("Data Loaded.");				
 		}
 	}
